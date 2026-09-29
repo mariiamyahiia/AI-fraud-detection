@@ -29,23 +29,23 @@ Place `creditcard.csv` in `data/raw/`.
 ```
 fraud-detection-project/
 ├── app/
-│   └── streamlit_app.py            # Member 4 - prediction app + dashboard
-├── artifacts/                      # Saved models, preprocessor, metrics, figures
-│   ├── preprocessor.joblib         # Member 1
-│   ├── xgboost_fraud_model.joblib  # Member 3 (baseline)
-│   ├── final_fraud_model.joblib    # Member 4 (tuned model + threshold)
+│   └── streamlit_app.py            
+├── artifacts/                      
+│   ├── preprocessor.joblib         
+│   ├── xgboost_fraud_model.joblib  
+│   ├── final_fraud_model.joblib    
 │   ├── metrics.json, dashboard_stats.json, sample_transactions.csv
-│   └── figures/                    # SHAP, threshold and comparison plots
+│   └── figures/                    
 ├── data/
 │   ├── raw/creditcard.csv
-│   └── processed/                  # X_train / X_test / y_train / y_test (parquet)
-├── member2_outputs/                # SMOTE-resampled train set, class weights
+│   └── processed/                  
+├── member2_outputs/                
 ├── notebooks/
 │   ├── 01_data_understanding_preprocessing.ipynb
 │   ├── 02_feature_engineering_imbalance.ipynb
 │   ├── 03_model_comparison.ipynb
 │   └── 04_optimization_explainability.ipynb
-├── prepare_data.py                 # Rebuilds processed data + preprocessor from the raw CSV
+├── prepare_data.py                 
 ├── requirements.txt
 └── README.md
 ```
@@ -104,15 +104,6 @@ streamlit run app/streamlit_app.py
 - **Threshold**: chosen from out-of-fold training predictions (F1-optimal, or a minimum-recall rule) and never from the test set, which is used once for the final report.
 - **Explainability**: SHAP values explain the model globally and per transaction.
 
-## Results
-
-Fill in from `artifacts/metrics.json` after running notebook 04.
-
-| Model | Precision | Recall | F1 | PR-AUC |
-|---|---|---|---|---|
-| Baseline XGBoost (threshold 0.5) | | | | |
-| Tuned XGBoost (threshold 0.5) | | | | |
-| Tuned XGBoost + optimized threshold | | | | |
 
 ## Limitations & Future Work
 
