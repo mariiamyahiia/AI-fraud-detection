@@ -1,9 +1,12 @@
-﻿numpy
+numpy
 pandas
+pyarrow
+scikit-learn
+imbalanced-learn
+xgboost
+shap
 matplotlib
 seaborn
-scikit-learn
-ipykernel
-pyarrow
-fastparquet
 joblib
+streamlit
+jupyter

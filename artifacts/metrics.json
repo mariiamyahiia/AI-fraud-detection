@@ -1,0 +1,56 @@
+{
+  "comparison": {
+    "Baseline (M3, thr 0.5)": {
+      "Threshold": 0.5,
+      "Precision": 0.8085106383,
+      "Recall": 0.8,
+      "F1": 0.8042328042,
+      "ROC-AUC": 0.971800377,
+      "PR-AUC": 0.8207296712,
+      "TP": 76.0,
+      "FP": 18.0,
+      "FN": 19.0,
+      "TN": 56633.0
+    },
+    "Tuned (thr 0.5)": {
+      "Threshold": 0.5,
+      "Precision": 0.8928571429,
+      "Recall": 0.7894736842,
+      "F1": 0.8379888268,
+      "ROC-AUC": 0.9757088879,
+      "PR-AUC": 0.8127047516,
+      "TP": 75.0,
+      "FP": 9.0,
+      "FN": 20.0,
+      "TN": 56642.0
+    },
+    "Tuned + threshold 0.85": {
+      "Threshold": 0.8485,
+      "Precision": 0.985915493,
+      "Recall": 0.7368421053,
+      "F1": 0.843373494,
+      "ROC-AUC": 0.9757088879,
+      "PR-AUC": 0.8127047516,
+      "TP": 70.0,
+      "FP": 1.0,
+      "FN": 25.0,
+      "TN": 56650.0
+    }
+  },
+  "threshold": 0.848528265953064,
+  "threshold_strategy": "f1",
+  "cv_best_pr_auc": 0.8595420837911764,
+  "best_params": {
+    "smote__sampling_strategy": "0.05",
+    "clf__subsample": "0.7",
+    "clf__reg_lambda": "1",
+    "clf__n_estimators": "500",
+    "clf__min_child_weight": "1",
+    "clf__max_depth": "6",
+    "clf__learning_rate": "0.05",
+    "clf__gamma": "0",
+    "clf__colsample_bytree": "0.8"
+  },
+  "test_fraud_count": 95,
+  "test_size": 56746
+}
